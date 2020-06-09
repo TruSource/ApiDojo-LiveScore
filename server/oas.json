@@ -1,0 +1,264 @@
+{
+  "servers": [
+    {
+      "url": "https://livescore6.p.rapidapi.com"
+    }
+  ],
+  "openapi": "3.0.3",
+  "components": {
+    "securitySchemes": {
+      "YXBpS2V5X2hlYWRlcl94LXJhcGlkYXBpLWtleV80NzA1NjA0MzE2bXNoZjE5YjA0ZDljNDU2MjcxcDE1ZDBiNmpzbmIxMGE4ZGNkNzZhYw==": {
+        "name": "x-rapidapi-key",
+        "in": "header",
+        "x-key": "",
+        "type": "apiKey"
+      }
+    }
+  },
+  "paths": {
+    "/matches/list-by-league": {
+      "get": {
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "example": "soccer",
+            "name": "category",
+            "required": true,
+            "in": "query"
+          },
+          {
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "england",
+            "name": "league"
+          },
+          {
+            "example": "livescore6.p.rapidapi.com",
+            "name": "x-rapidapi-host",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "YXBpS2V5X2hlYWRlcl94LXJhcGlkYXBpLWtleV80NzA1NjA0MzE2bXNoZjE5YjA0ZDljNDU2MjcxcDE1ZDBiNmpzbmIxMGE4ZGNkNzZhYw==": []
+          }
+        ],
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        },
+        "operationId": "getMatchesLeague"
+      }
+    },
+    "/leagues/list": {
+      "get": {
+        "operationId": "getLeagues",
+        "parameters": [
+          {
+            "example": "soccer",
+            "name": "category",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "example": "livescore6.p.rapidapi.com",
+            "name": "x-rapidapi-host",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "YXBpS2V5X2hlYWRlcl94LXJhcGlkYXBpLWtleV80NzA1NjA0MzE2bXNoZjE5YjA0ZDljNDU2MjcxcDE1ZDBiNmpzbmIxMGE4ZGNkNzZhYw==": []
+          }
+        ],
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        }
+      }
+    },
+    "/matches/list-by-date": {
+      "get": {
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        },
+        "operationId": "getMatchesByDate",
+        "parameters": [
+          {
+            "example": "soccer",
+            "name": "category",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "example": "2019-08-04",
+            "name": "date",
+            "required": true,
+            "in": "query"
+          },
+          {
+            "example": "livescore6.p.rapidapi.com",
+            "name": "x-rapidapi-host",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "YXBpS2V5X2hlYWRlcl94LXJhcGlkYXBpLWtleV80NzA1NjA0MzE2bXNoZjE5YjA0ZDljNDU2MjcxcDE1ZDBiNmpzbmIxMGE4ZGNkNzZhYw==": []
+          }
+        ]
+      }
+    },
+    "/matches/detail": {
+      "get": {
+        "operationId": "getMatchesDetail",
+        "parameters": [
+          {
+            "example": "soccer",
+            "name": "category",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            },
+            "example": 3065852,
+            "name": "id"
+          },
+          {
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            },
+            "example": 1,
+            "name": "p"
+          },
+          {
+            "example": "livescore6.p.rapidapi.com",
+            "name": "x-rapidapi-host",
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "YXBpS2V5X2hlYWRlcl94LXJhcGlkYXBpLWtleV80NzA1NjA0MzE2bXNoZjE5YjA0ZDljNDU2MjcxcDE1ZDBiNmpzbmIxMGE4ZGNkNzZhYw==": []
+          }
+        ],
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        }
+      }
+    },
+    "/matches/get-table": {
+      "get": {
+        "operationId": "getTable",
+        "parameters": [
+          {
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "example": "soccer",
+            "name": "category"
+          },
+          {
+            "example": 1,
+            "name": "p",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "example": 3065852,
+            "name": "id",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "required": true,
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "livescore6.p.rapidapi.com",
+            "name": "x-rapidapi-host"
+          }
+        ],
+        "security": [
+          {
+            "YXBpS2V5X2hlYWRlcl94LXJhcGlkYXBpLWtleV80NzA1NjA0MzE2bXNoZjE5YjA0ZDljNDU2MjcxcDE1ZDBiNmpzbmIxMGE4ZGNkNzZhYw==": []
+          }
+        ],
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        }
+      }
+    }
+  },
+  "info": {
+    "x-category": "sports",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://apidojo.net/"
+    },
+    "description": "LiveScore API helps to query for football, cricket, basketball, tennis, hockey matches, leagues, news, etc… as on official site",
+    "title": "LiveScore",
+    "x-provider": "ApiDojo"
+  }
+}
